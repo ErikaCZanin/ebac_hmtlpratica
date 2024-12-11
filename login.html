@@ -4,15 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+   <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
 <body>
+    <div class="container">
+    <header>
+    <h1>Formulario de cadastro</h1>
+    </header>
+    </div>
     <form>
-        <label for="user">Usuário: </label>
-        <input id="user" type="text"/>
+        <label for="user" aria-label="Nome Completo" >Usuário: </label>
+        <input id="user" type="text" placeholder="Digite seu nome completo"/>
         <br>
-        <label for="senha">Senha: </label>
-        <input id="senha" type="password">
+        <label for="email" aria-label="E-mail">E-mail: </label>
+        <input id="email" type="email" aria-describedby="email-help" autocomplete="email"/>
+        <br>
+        <label style="color: red;" for="senha">Senha: </label>
+        <input id="senha" type="password" autocomplete="new-password">
+        <br>
+        <br>
+        <button class="botaoenvio" type="submit" aria-label="Cadastrar">
+            Cadastro
+        </button>
+        <button class="botaoapagar" type="reset" aria-label="Limpar">
+            Apagar dados
+        </button>
     </form>
-    <a href="./index.html">Home</a>
 </body>
 </html>
